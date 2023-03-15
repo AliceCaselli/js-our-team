@@ -59,25 +59,40 @@ const staffMembers = [
 
 ];
 
+// variabile per le cards
+let cardsEl = document.getElementById("cards");
 
-//variabile lista contenitore
-let listEl = document.getElementById("list");
 
-
-//ciclo per stampare i valori delle proprietà degli oggetti dell'array
 for( let i = 0; i < staffMembers.length; i++){
 
+
+    // creo il contenitore delle cards
+    let newCardElement = document.createElement('div');
+    cardsEl.append(newCardElement);
+    newCardElement.classList.add('badge');
+
+
+    // variabile per l'elemento corrente
+    let person = staffMembers[i];
+
+    // variabile del nome
+    let nameEl = document.createElement('div');
+    nameEl.innerText = person.name;
+    nameEl.classList.add('name');
+
+    // variabile del ruolo
+    let roleEl = document.createElement('div');
+    roleEl.innerText = person.role;
+    roleEl.classList.add('role');
+    // variabile per img
+    let imgEl = document.createElement('img');
+    imgEl.src = "img/" + person.img;
+    imgEl.classList.add('img-style');
+
     
-    for( let keyPerson in staffMembers[i]){
-
-        newEl = document.createElement('li');
-        listEl.append(newEl);
-        newEl.innerText = `${staffMembers[i][keyPerson]}`
-
-        console.log(keyPerson);
     
-        console.log(staffMembers[i][keyPerson]);
-    }
-
+    newCardElement.append(imgEl);
+    newCardElement.append(nameEl);
+    newCardElement.append(roleEl);
 }
 

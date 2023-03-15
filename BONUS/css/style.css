@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    background-color: grey;
+}
+#cards{
+    display: flex;
+    flex-flow: row wrap;
+    width: 900px;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1,p{
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+
+.badge{
+    width: calc(100% / 3 - 20px);
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.img-style{
+
+    width: 100%;
+}
+
+.name{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.role{
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 0.8em;
+}
